@@ -1,7 +1,7 @@
 from db import db
 
 
-class Farmer(db.Model):
+class FarmerModel(db.Model):
     __tablename__ = 'farmer'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -16,9 +16,27 @@ class Farmer(db.Model):
         self.field_key = field_key
         self.field_value = field_value
 
+    def json(self):
+        return {
+            "farmer_id": self.farmer_id,
+            "language_code": self.language_code,
+            "field_key": self.field_key,
+            "field_value": self.field_value
+        }
+
     @classmethod
     def find_by_farmer_id(cls, farmer_id):
-        return cls.quert.filter_by(farmer_id=farmer_id).all()
+        return cls.query.filter_by(farmer_id=farmer_id).all()
+
+    @classmethod
+    def find_all(cls):
+        return cls.query.all()
+
+    @classmethod
+    def commit_all(cls, farmers):
+        for farmer in farmers:
+            db.session.add(farmer)
+        db.session.commit()
 
     def save_to_db(self):
         db.session.add(self)
