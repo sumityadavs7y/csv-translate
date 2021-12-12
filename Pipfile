@@ -6,9 +6,9 @@ name = "pypi"
 [packages]
 flask = "*"
 flask-restful = "*"
-python-dotenv = "*"
 sqlalchemy = "*"
 flask-sqlalchemy = "*"
+python-dotenv = "*"
 
 [dev-packages]
 autopep8 = "*"
