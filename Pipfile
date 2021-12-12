@@ -12,6 +12,9 @@ python-dotenv = "*"
 pandas = "*"
 google = "*"
 google-cloud-translate = "==2.0.1"
+gunicorn = "*"
+psycopg2 = "*"
+flask-cors = "*"
 
 [dev-packages]
 autopep8 = "*"
