@@ -1,5 +1,6 @@
 # custom files
 data.db
+uploads/*
 
 # vscode
 .vscode/
