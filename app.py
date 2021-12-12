@@ -12,6 +12,8 @@ load_dotenv()
 app = Flask(__name__)
 api = Api(app)
 
+app.config['GOOGLE_API_CREDENTIAL'] = os.environ.get('GOOGLE_API_CREDENTIAL')
+
 api.add_resource(Home, '/')
 api.add_resource(UploadCSV, '/upload')
 
