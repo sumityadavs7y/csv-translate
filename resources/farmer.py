@@ -4,7 +4,7 @@ from flask_restful import Resource, request
 from werkzeug.utils import secure_filename
 
 from models.farmer import FarmerModel
-from util.transformUtil import combine_all_farmers, combine_farmers, combine_key_and_value
+from util.transformUtil import combine_all_farmers
 from util.translateUtil import translate_and_save
 
 ALLOWED_EXTENSIONS = set(['csv'])
