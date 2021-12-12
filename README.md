@@ -43,3 +43,19 @@ pip install pipenv
 pipenv install
 pipenv run python app.py
 ```
+
+add your google translate api credentials in .env file. for example:
+```
+GOOGLE_API_CREDENTIAL = '{
+    "type": "service_account",
+    "project_id": "exaple-project-123",
+    "private_key_id": "e6e5a29605ded8d2cf11a9c2a61314f93f9f01cb",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiertwertwetM6AtAKtnAB4vrCf/AjIh3U2VEqF1weryhdfgdsMbOY/S\no6a1vX+hIO+3eO6WPiDN1fbyhNjiSwdwCcDHJUZhmBTNZ9E7yJFN/Ft1N7yRh8sdfgsdfg96Hyf9B9nSOJG9mr7OKYaloVuicVOm\n3ES0MtN6+iM/+GyQPk0DPAwGesAwLxKAYskXEF9T18iOb2bV8f+9uHPM8fxhbb41\nlvW0TTfHj2p5q+IRHKwCIQ==\n-----END PRIVATE KEY-----\n",
+    "client_email": "example@example123.iam.gserviceaccount.com",
+    "client_id": "123421223485723481",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/example%40project-123555.iam.gserviceaccount.com"
+}'
+```
