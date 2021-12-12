@@ -1,0 +1,54 @@
+{
+	"variables": [],
+	"info": {
+		"name": "csv translate",
+		"_postman_id": "9f7a68bf-ff8f-11e0-90e1-fe50f46d8213",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"url": "localhost:5000/upload",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "",
+							"type": "file",
+							"src": "test.csv"
+						}
+					]
+				},
+				"description": "upload csv file"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/farmers",
+			"request": {
+				"url": "localhost:5000/farmers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/farmer/HiyaaB",
+			"request": {
+				"url": "localhost:5000/farmer/HiyaaB",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
